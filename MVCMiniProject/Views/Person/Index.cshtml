@@ -1,0 +1,20 @@
+﻿@model List<PersonModel>
+
+
+@{
+    ViewData["Title"] = "People";
+}
+
+<div>
+    <h1 class="display-4">People</h1>
+    <ul>
+    @foreach (var item in Model)
+    {
+            @if (item.IsActive)
+            {
+                <li>@item.FirstName @item.LastName</li>
+            }
+    }
+    </ul>
+
+</div>
